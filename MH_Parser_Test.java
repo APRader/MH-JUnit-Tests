@@ -25,20 +25,6 @@ public class MH_Parser_Test {
     	}
     	return out;
     }
-    
-    private static String readCorrectParseTree(String parse_tree_file_name) throws IOException {
-    	String fileString = new String(Files.readAllBytes(Paths.get(parse_tree_file_name)), StandardCharsets.UTF_8);
-    	return fileString;
-    }
-    
-    private static String correct_parse_tree;
-    
-    @BeforeClass
-    public static void init() throws IOException {
-    	correct_parse_tree = readCorrectParseTree("parse_tree.txt"); 
-    }
-    
-    
 
 	static MH_Parser MH_Parser1 = MH_Type_Impl.MH_Parser1 ;
 	
