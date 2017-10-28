@@ -1,13 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
@@ -25,7 +19,7 @@ public class MH_Parser_Test {
     	}
     	return out;
     }
-
+    
 	static MH_Parser MH_Parser1 = MH_Type_Impl.MH_Parser1 ;
 	
 	@Test
@@ -74,5 +68,5 @@ public class MH_Parser_Test {
 		LEX_TOKEN_STREAM MH_Lexer = 
 				new CheckedSymbolLexer (new MH_Lexer (reader)) ;
 			    TREE prog = MH_Parser1.parseTokenStream (MH_Lexer) ;
-	    }
+    }
 }
